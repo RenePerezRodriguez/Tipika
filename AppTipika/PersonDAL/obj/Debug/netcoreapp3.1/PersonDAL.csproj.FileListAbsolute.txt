@@ -1,0 +1,4 @@
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTipika\PersonDAL\bin\Debug\netcoreapp3.1\AppTipika.Common.dll
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.csprojAssemblyReference.cache
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.AssemblyInfoInputs.cache
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.AssemblyInfo.cs

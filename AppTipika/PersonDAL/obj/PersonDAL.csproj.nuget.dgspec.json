@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj",
+        "projectName": "AppTipika.Common",
+        "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Rene_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rene_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj",
+        "projectName": "AppTipika.PersonDAL",
+        "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj",
+        "packagesPath": "C:\\Users\\Rene_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rene_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
