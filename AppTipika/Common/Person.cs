@@ -36,7 +36,7 @@ namespace AppTipika.Common
         /// <summary>
         ///  Property for phone
         /// </summary>
-        public byte Phone { get; set; }
+        public short Phone { get; set; }
 
         /// <summary>
         ///  Property for user
