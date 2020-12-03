@@ -10,7 +10,7 @@ namespace AppTipika.Common
         /// <summary>
         /// Propertie for Idvehiculo
         /// </summary>
-        public Vehicle Vehicle { get; set; }
+       // public Vehicle Vehicle { get; set; }
         /// <summary>
         /// Propertie for salary
         /// </summary>

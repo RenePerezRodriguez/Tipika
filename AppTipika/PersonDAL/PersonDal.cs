@@ -1,4 +1,5 @@
 ﻿using AppTipika.Common;
+using AppTipika.Common.Operations;
 using System;
 using System.Data.SqlClient;
 
@@ -14,9 +15,9 @@ namespace AppTipika.PersonDAL
         /// Inserta una Persona a la base de datos 
         /// </summary>
         /// <param name="person"></param>
-        public static void InsertWithTransaction(Person person, SqlTransaction transaction, SqlConnection connection)
+        public static void Insert(Person person)
         {
-            Operations.WriteLogsDebug("PersonDal", "Insert", string.Format("{0} Info: {1}",
+            OperationsLogs.WriteLogsDebug("PersonDal", "Insert", string.Format("{0} Info: {1}",
             DateTime.Now.ToString(), "Starting to execute the data access method to create a person"));
 
             SqlCommand command = null;
@@ -24,13 +25,23 @@ namespace AppTipika.PersonDAL
             //Consulta para insertar personas
             string queryString = @"INSERT INTO Persona(idPersona, cedulaDeIdentidad, nombres, primerApellido, segundoApellido, correoElectronico, direccion, telefono, eliminado) 
                                    VALUES(@idPersona, @cedulaDeIdentidad, @nombres, @primerApellido, @segundoApellido, @correoElectronico, @direccion, @telefono, @eliminado)";
+            //Declaro e inicio la conexion
+            SqlConnection conexion = OperationsSql.ObtenerConexion();
 
+            //Declaro la transaccion
+            SqlTransaction transaccion = null;
             try
             {
-                command = OperationsPlsql.CreateBasicCommandWithTransaction(queryString, transaction, connection);
+                //Abro la conexion a la base de datos
+                conexion.Open();
+
+                //Inicio la transaccion
+                transaccion = conexion.BeginTransaction();
+
+                command = OperationsSql.CreateBasicCommandWithTransaction(queryString, transaccion, conexion);
                 if (person.User != null)
                 {
-                    UserDal.InsertTransaction(person.User, transaction, connection);
+                    UserDal.InsertTransaction(person.User, transaccion, conexion);
                     command.Parameters.AddWithValue("@idUsuario", person.User.IdUser);
                 }
                 else
@@ -43,25 +54,30 @@ namespace AppTipika.PersonDAL
                 command.Parameters.AddWithValue("@nombres", person.Names);
                 command.Parameters.AddWithValue("@primerApellido", person.FirstSurname);
                 command.Parameters.AddWithValue("@segundoApellido", person.SecondSurname);
-                command.Parameters.AddWithValue("@correoElectronico", person.Email);
+                command.Parameters.AddWithValue("@correoElectronico", person.Email);         
                 command.Parameters.AddWithValue("@direccion", person.Address);
                 command.Parameters.AddWithValue("@telefono", person.Phone);
-                command.Parameters.AddWithValue("@eliminado",1);
+                command.Parameters.AddWithValue("@eliminado", 1);
+                OperationsSql.ExecuteBasicCommandWithTransaction(command);
+              
+                transaccion.Commit();
 
-                OperationsPlsql.ExecuteBasicCommandWithTransaction(command);    
             }
             catch (SqlException ex)
             {
-                Operations.WriteLogsRelease("PersonDal", "Insert", string.Format("{0} Error: {1}", DateTime.Now.ToString(), DateTime.Now.ToString(), ex.Message));
+                OperationsLogs.WriteLogsRelease("PersonDal", "Insert", string.Format("{0} Error: {1}", DateTime.Now.ToString(), DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
             catch (Exception ex)
             {
-                Operations.WriteLogsRelease("PersonDal", "Insert", string.Format("{0} Error: {1}", DateTime.Now.ToString(), DateTime.Now.ToString(), ex.Message));
+                OperationsLogs.WriteLogsRelease("PersonDal", "Insert", string.Format("{0} Error: {1}", DateTime.Now.ToString(), DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
-
-            Operations.WriteLogsDebug("PersonDal", "Insert", string.Format("{0} Info: {1}",
+            finally
+            {
+                conexion.Close();
+            }
+            OperationsLogs.WriteLogsDebug("PersonDal", "Insert", string.Format("{0} Info: {1}",
                 DateTime.Now.ToString(), DateTime.Now.ToString(),
                 "I finish executing the data access method to insert person"));
         }
@@ -71,7 +87,7 @@ namespace AppTipika.PersonDAL
         /// <param name="Person"></param>
         public static void ToUpdate(Person person)
         {
-            Operations.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un Persona"));
+            OperationsLogs.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un Persona"));
 
             SqlCommand command = null;
 
@@ -81,7 +97,7 @@ namespace AppTipika.PersonDAL
             try
             {
 
-                command = OperationsPlsql.CreateBasicCommand(queryString);
+                command = OperationsSql.CreateBasicCommand(queryString);
                 command.Parameters.AddWithValue("@idPersona", person.IdPerson);
                 command.Parameters.AddWithValue("@cedulaDeIdentidad", person.IdentityCard);
                 command.Parameters.AddWithValue("@nombres", person.Names);
@@ -103,20 +119,20 @@ namespace AppTipika.PersonDAL
                     command.Parameters.AddWithValue("@idUsuario", DBNull.Value);
                 }
 
-                OperationsPlsql.ExecuteBasicCommand(command);
+                OperationsSql.ExecuteBasicCommand(command);
             }
             catch (SqlException ex)
             {
-                Operations.WriteLogsRelease("PersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
+                OperationsLogs.WriteLogsRelease("PersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
             catch (Exception ex)
             {
-                Operations.WriteLogsRelease("PPersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
+                OperationsLogs.WriteLogsRelease("PPersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
 
-            Operations.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Termino de ejecutar  el metodo acceso a datos para Eliminar un Cliente"));
+            OperationsLogs.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Termino de ejecutar  el metodo acceso a datos para Eliminar un Cliente"));
 
         }
         /// <summary>
@@ -125,7 +141,7 @@ namespace AppTipika.PersonDAL
         /// <param name="idPersona"></param>
         public static void DeleteWithTransaction(Guid idPersona, SqlTransaction transaction, SqlConnection connection)
         {
-            Operations.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un Persona"));
+            OperationsLogs.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un Persona"));
 
             SqlCommand command = null;
 
@@ -134,9 +150,9 @@ namespace AppTipika.PersonDAL
                                     WHERE idPersona = @idPersona";
             try
             {
-                command = OperationsPlsql.CreateBasicCommandWithTransaction(queryString, transaction, connection);
+                command = OperationsSql.CreateBasicCommandWithTransaction(queryString, transaction, connection);
                 command.Parameters.AddWithValue("@idPersona", idPersona);
-                OperationsPlsql.ExecuteBasicCommandWithTransaction(command);
+                OperationsSql.ExecuteBasicCommandWithTransaction(command);
 
                 //elimina al usuario
                 UserDal.DeleteByPersonIdWithTransaction(idPersona, transaction, connection);
@@ -144,16 +160,16 @@ namespace AppTipika.PersonDAL
             }
             catch (SqlException ex)
             {
-                Operations.WriteLogsRelease("PersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
+                OperationsLogs.WriteLogsRelease("PersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
             catch (Exception ex)
             {
-                Operations.WriteLogsRelease("PersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
+                OperationsLogs.WriteLogsRelease("PersonDal", "Delete", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
 
-            Operations.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Termino de ejecutar  el metodo acceso a datos para Eliminar un Cliente"));
+            OperationsLogs.WriteLogsDebug("PersonDal", "Delete", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Termino de ejecutar  el metodo acceso a datos para Eliminar un Cliente"));
         }
         #endregion
     }

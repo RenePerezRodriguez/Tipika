@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj": {}
+    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\PersonDAL\\PersonDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj": {
+    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\Common\\Common.csproj",
         "projectName": "AppTipika.Common",
-        "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Rene_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\obj\\",
+        "outputPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rene_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj": {
+    "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\PersonDAL\\PersonDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj",
+        "projectUniqueName": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\PersonDAL\\PersonDAL.csproj",
         "projectName": "AppTipika.PersonDAL",
-        "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\PersonDAL.csproj",
+        "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\PersonDAL\\PersonDAL.csproj",
         "packagesPath": "C:\\Users\\Rene_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\PersonDAL\\obj\\",
+        "outputPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\PersonDAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rene_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +92,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\AppTipika\\Common\\Common.csproj"
+              "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\Common\\Common.csproj"
               }
             }
           }

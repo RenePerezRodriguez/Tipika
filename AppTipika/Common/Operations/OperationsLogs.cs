@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AppTipika.Common
+﻿namespace AppTipika.Common
 {
-    public class Operations
+    public class OperationsLogs
     {
         /// <summary>
         /// Escribe en el log en modo depuración

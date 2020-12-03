@@ -2,3 +2,15 @@ C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTip
 C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.csprojAssemblyReference.cache
 C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.AssemblyInfoInputs.cache
 C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.AssemblyInfo.cs
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.csprojAssemblyReference.cache
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.AssemblyInfoInputs.cache
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.AssemblyInfo.cs
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.csproj.CoreCompileInputs.cache
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\bin\Debug\netcoreapp3.1\AppTipika.PersonDAL.deps.json
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\bin\Debug\netcoreapp3.1\AppTipika.PersonDAL.dll
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\bin\Debug\netcoreapp3.1\AppTipika.PersonDAL.pdb
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\bin\Debug\netcoreapp3.1\AppTipika.Common.dll
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\bin\Debug\netcoreapp3.1\AppTipika.Common.pdb
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\PersonDAL.csproj.CopyComplete
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\AppTipika.PersonDAL.dll
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\PersonDAL\obj\Debug\netcoreapp3.1\AppTipika.PersonDAL.pdb
