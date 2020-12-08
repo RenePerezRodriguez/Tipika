@@ -296,7 +296,7 @@ namespace AppTipika.PersonDAL
             Person person = new Person();
             SqlCommand cmd = null;
             SqlDataReader dr = null;
-            string query = @"SELECT * 
+            string query = @"SELECT idPersona, idUsuario, cedulaDeIdentidad, nombres, primerApellido, segundoApellido, correoElectronico, direccion, telefono, eliminado
                              FROM Persona 
                              WHERE idPersona = @id and eliminado = 1";
             try
@@ -368,9 +368,9 @@ namespace AppTipika.PersonDAL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static Employee ObtenerEmpleado(Guid id)
+        public static Common.Employee ObtenerEmpleado(Guid id)
         {
-            Employee persona = new Employee();
+            Common.Employee persona = new Common.Employee();
             SqlCommand cmd = null;
             SqlDataReader dr = null;
             string query = @"SELECT idPersona, idUsuario cedulaDeIdentidad, nombres, primerApellido, segundoApellido, correoElectronico, direccion, telefono, eliminado 
@@ -383,7 +383,7 @@ namespace AppTipika.PersonDAL
                 dr = OperationsSql.ExecuteDataReaderCommand(cmd);
                 while (dr.Read())
                 {
-                    persona = new Employee()
+                    persona = new Common.Employee()
                     {
                         IdPerson = dr.GetGuid(0),
                         User = UserDal.Obtener(dr.GetGuid(1)),

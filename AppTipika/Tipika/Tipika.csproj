@@ -13,4 +13,9 @@
     <ProjectReference Include="..\PersonaBRL\PersonaBRL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CRUD\CRUD_PEDIDO\" />
+    <Folder Include="CRUD\CRUD_PRODUCTO\" />
+  </ItemGroup>
+
 </Project>

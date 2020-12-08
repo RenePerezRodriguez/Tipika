@@ -133,7 +133,8 @@ namespace AppTipika.Presentation.CRUD {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AppTipika.Presentation;component/crud/crud_cliente/clienteinsert_update.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AppTipika.Presentation;V1.0.0.0;component/crud/crud_cliente/clienteinsert_update" +
+                    ".xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\CRUD\CRUD_CLIENTE\ClienteInsert_Update.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

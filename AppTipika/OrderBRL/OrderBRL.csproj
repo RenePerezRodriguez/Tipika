@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>AppTipika.OrderBRL</AssemblyName>
+    <RootNamespace>AppTipika.OrderBRL</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\PedidoDAL\OrderDAL.csproj" />
+  </ItemGroup>
+
+</Project>
