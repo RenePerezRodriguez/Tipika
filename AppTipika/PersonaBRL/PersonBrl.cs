@@ -7,39 +7,37 @@ namespace AppTipika.PersonaBRL
 {
     public class PersonBrl
     {
-        #region Methods
         /// <summary>
         /// método lógica de negocio para insertar un persona
         /// </summary>
-        /// <param name="person"></param>
-        public static void Insert(Person person)
+        /// <param name="persona"></param>
+        public static void Insert(Person persona)
         {
-            OperationsLogs.WriteLogsDebug("PersonBrl", "Insert", string.Format("{0} Info: {1}",
+            OperationsLogs.WriteLogsDebug("PersonaBrl", "Insertar", string.Format("{0} Info: {1}",
             DateTime.Now.ToString(),
-            "Starting to run the business logic method to create a persona"));
+            "Empezando a ejecutar el método lógica de negocio para crear un persona"));
 
             try
             {
-                PersonDal.Insert(person);
+                PersonDal.Insertar(persona);
             }
             catch (SqlException ex)
             {
-                OperationsLogs.WriteLogsRelease("PersonBrl", "Insert", string.Format("{0} Error: {1}",
+                OperationsLogs.WriteLogsRelease("PersonaBrl", "Insertar", string.Format("{0} Error: {1}",
                     DateTime.Now.ToString(), DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
             catch (Exception ex)
             {
-                OperationsLogs.WriteLogsRelease("PersonBrl", "Insert", string.Format("{0} Error: {1}",
+                OperationsLogs.WriteLogsRelease("PersonaBrl", "Insertar", string.Format("{0} Error: {1}",
                     DateTime.Now.ToString(), DateTime.Now.ToString(), ex.Message));
                 throw ex;
             }
 
-            OperationsLogs.WriteLogsDebug("PersonBrl", "Insert", string.Format("{0} Info: {1}",
+            OperationsLogs.WriteLogsDebug("PersonaBrl", "Insertar", string.Format("{0} Info: {1}",
                 DateTime.Now.ToString(), DateTime.Now.ToString(),
                 "Termino de ejecutar  el método lógica de negocio para insertar persona"));
 
         }
-        #endregion
     }
 }

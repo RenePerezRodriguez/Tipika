@@ -10,6 +10,11 @@ namespace AppTipika.Common
         /// </summary>
         public Guid IdPerson { get; set; }
         /// <summary>
+        ///  Property for user
+        /// </summary>
+        public User User { get; set; }
+
+        /// <summary>
         /// Property for identitycard
         /// </summary>
         public string IdentityCard { get; set; }
@@ -36,13 +41,7 @@ namespace AppTipika.Common
         /// <summary>
         ///  Property for phone
         /// </summary>
-        public short Phone { get; set; }
-
-        /// <summary>
-        ///  Property for user
-        /// </summary>
-        public User User { get; set; }
-
+        public int Phone { get; set; }
         /// <summary>
         ///  Property for eliminado return 0 or 1
         /// </summary>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppTipika.Presentation.CRUD;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -22,10 +23,10 @@ namespace Tipika
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CRUD.PersonaInsert personaInsertWindow = new CRUD.PersonaInsert();
-            personaInsertWindow.Show();
+            ClienteInsert_Update clienteInsert_Update = new ClienteInsert_Update();
+            clienteInsert_Update.Show();
         }
     }
 }

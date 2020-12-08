@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AppTipika.Common
 {
@@ -22,7 +20,7 @@ namespace AppTipika.Common
         /// <summary>
         /// Propeerty for role
         /// </summary>
-        public byte Role { get; set; }
+        public string Role { get; set; }
         /// <summary>
         /// Propeerty for state
         /// </summary>
