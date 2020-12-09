@@ -31,9 +31,9 @@ namespace AppTipika.Presentation.CRUD
                 client.Names = txtNombres.Text.Trim();
                 client.FirstSurname = txtPrimerApellido.Text.Trim();
                 client.SecondSurname = txtSegundoApellido.Text.Trim();
-                client.Email = "email";
-                client.Address = "direccion";
-                client.Phone = short.Parse(txtTelefono.Text.Trim());
+                client.Email = txtCorreoElectronico.Text.Trim();
+                client.Address = txtdireccion.Text.Trim();
+                client.Phone = int.Parse(txtTelefono.Text.Trim());
 
                 client.User = new User();
                 client.User.IdUser = Guid.NewGuid();

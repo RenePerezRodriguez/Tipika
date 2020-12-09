@@ -18,4 +18,9 @@
     <Folder Include="CRUD\CRUD_PRODUCTO\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="1.2.7" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
+  </ItemGroup>
+
 </Project>

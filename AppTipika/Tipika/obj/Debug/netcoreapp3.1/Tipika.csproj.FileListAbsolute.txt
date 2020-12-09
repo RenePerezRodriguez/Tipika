@@ -49,3 +49,9 @@ C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika
 C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\obj\Debug\netcoreapp3.1\AppTipika.Presentation.g.resources
 C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\obj\Debug\netcoreapp3.1\AppTipika.Presentation.dll
 C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\obj\Debug\netcoreapp3.1\AppTipika.Presentation.pdb
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\obj\Debug\netcoreapp3.1\login.g.cs
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\obj\Debug\netcoreapp3.1\MenuInicio.g.cs
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\obj\Debug\netcoreapp3.1\login.baml
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\Users\Rene_\OneDrive\Documentos\Universidad\Base de datos III\Proyecto\Tipika\AppTipika\Tipika\obj\Debug\netcoreapp3.1\MenuInicio.baml

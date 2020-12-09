@@ -73,9 +73,9 @@ namespace AppTipika.PersonDAL
                 command.Parameters.AddWithValue("@idUsuario", usuario.IdUser);
                 command.Parameters.AddWithValue("@nombre", usuario.UserName);
                 command.Parameters.AddWithValue("@password", usuario.Password);
-                command.Parameters.AddWithValue("@rol", usuario.Role);
-                command.Parameters.AddWithValue("@eliminado", usuario.State);
-                command.Parameters.AddWithValue("@estadoPassword", usuario.PasswordState);
+                command.Parameters.AddWithValue("@rol", "cliente");
+                command.Parameters.AddWithValue("@eliminado", (byte)1);
+                command.Parameters.AddWithValue("@estadoPassword", (byte)1);
 
                 OperationsSql.ExecuteBasicCommandWithTransaction(command);
 
@@ -250,8 +250,7 @@ namespace AppTipika.PersonDAL
             SqlCommand cmd = null;
             SqlDataReader dr = null;
             string query = @"SELECT idUsuario, nombre, rol
-                             FROM Usuario 
-                             WHERE nombre = @nombre AND password = @password AND estado = 1 AND estadoPassword = 1";
+                             FROM Usuario";
             try
             {
                 cmd = OperationsSql.CreateBasicCommand(query);
@@ -284,7 +283,7 @@ namespace AppTipika.PersonDAL
             User res = new User();
             SqlCommand cmd = null;
             SqlDataReader dr = null;
-            string query = @"SELECT idUsuario, nombre, password, eliminado, estadoPassword 
+            string query = @"SELECT idUsuario
                              FROM Usuario 
                              WHERE nombre = @nombre and eliminado = 1";
             try
@@ -296,11 +295,7 @@ namespace AppTipika.PersonDAL
                 {
                     res = new User()
                     {
-                        IdUser = dr.GetGuid(0),
-                        UserName = dr.GetString(1),
-                        Password = dr.GetString(2),
-                        State = dr.GetByte(3),
-                        PasswordState = dr.GetByte(4)
+                        IdUser = dr.GetGuid(0)
                     };
                 }
             }

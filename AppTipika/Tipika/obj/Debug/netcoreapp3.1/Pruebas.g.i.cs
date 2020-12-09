@@ -53,7 +53,7 @@ namespace Tipika {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AppTipika.Presentation;V1.0.0.0;component/pruebas.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AppTipika.Presentation;component/pruebas.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Pruebas.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

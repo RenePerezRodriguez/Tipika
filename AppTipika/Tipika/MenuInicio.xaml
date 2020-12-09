@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppTipika.Presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MenuPrincipal" Width="1600" Height="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
@@ -43,14 +44,25 @@
                 </Ellipse>
                 <TextBlock Foreground="White" x:Name="tbkRol" HorizontalAlignment="Left" VerticalAlignment="Top" ><Run Text="Rol"/></TextBlock>
                 <TextBlock Foreground="White" x:Name="tbkUsuario" HorizontalAlignment="Right" VerticalAlignment="center" ><Run Text="Usuario"/></TextBlock>
+                <materialDesign:PopupBox Foreground="White" PlacementMode="BottomAndAlignRightEdges" Margin="10" StaysOpen="False">
+                    <StackPanel Width="165">
+                        <!--<Button x:Name="btnDatos" Content="Datos de la cuenta" Click="BtnDatos_Click"/>
+                        <Button Content="Acerca de ..." />-->
+                        <Button x:Name="btnCambiar" Click="btnCambiar_Click" Content="Cambiar de Usuario" />
+                        <Separator/>
+                        <Button x:Name="btnSalir" Click="btnSalir_Click" Content="Salir"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
             </StackPanel>
             <TextBlock FontSize="50" FontWeight="Bold" Text="Bienvenido Usuario" TextAlignment="Center" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="510,390,234,-400" Height="80" Width="850"/>
         </Grid>
         <Grid x:Name="GridMenuCol" Background="#1C1C1C"  Width="250" HorizontalAlignment="Left" >
 
             <Button ToolTip="Cerrar Menu" x:Name="btnCollapseMenu" Click="btnCollapseMenu_Click" Width="60" Height="70" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                <materialDesign:PackIcon Foreground="White" Kind="ArrowLeftBold" Width="30" Height="30"/>
             </Button>
             <Button ToolTip="Abrir Menu" x:Name="btnOpenMenu" Click="btnOpenMenu_Click" Width="60" Height="70" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" Visibility="Collapsed" BorderBrush="{x:Null}">
+                <materialDesign:PackIcon Foreground="White" Kind="Menu" Width="30" Height="30"/>
             </Button>
         </Grid>
         <Grid x:Name="GridMenu" Background="#FF1F2129" Width="200" HorizontalAlignment="Left" >
@@ -59,37 +71,43 @@
 
                     <Image x:Name="imgLogo" Source="img/user.png" VerticalAlignment="Bottom" Width="150"/>
                 </Grid>
-                <ListView x:Name="lvwMenu" SelectionChanged="lvwMenu_SelectionChanged" Foreground="White" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView x:Name="lvwMenu" SelectionChanged="lvwMenu_SelectionChanged" Background="#FF1F2129" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListViewItem Height="60" x:Name="itemHome">
                         <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Home" Width="30" Height="30" VerticalAlignment="Center" />
                             <TextBlock Text="Inicio" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60" x:Name="itemCompra">
                         <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Cash" Width="30" Height="30" VerticalAlignment="Center" />
                             <TextBlock Text="Compra" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60" x:Name="itemVenta">
                         <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Cash" Width="30" Height="30" VerticalAlignment="Center" />
                             <TextBlock Text="Venta" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
 
                     <ListViewItem Height="60" x:Name="itemEmpleado">
                         <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Account" Width="30" Height="30" VerticalAlignment="Center" />
                             <TextBlock Text="Empleado" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
 
                     <ListViewItem Height="60" x:Name="itemProducto">
                         <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Account" Width="30" Height="30" VerticalAlignment="Center" />
                             <TextBlock Text="Producto" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
 
                     <ListViewItem Height="60" x:Name="itemProveedor">
                         <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Account" Width="30" Height="30" VerticalAlignment="Center" />
                             <TextBlock Text="Proveedor" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>

@@ -118,9 +118,10 @@ namespace AppTipika.PersonDAL
                 command.Parameters.AddWithValue("@correoElectronico", person.Email);
                 command.Parameters.AddWithValue("@direccion", person.Address);
                 command.Parameters.AddWithValue("@telefono", person.Phone);
-                command.Parameters.AddWithValue("@eliminado", 1);
+                command.Parameters.AddWithValue("@eliminado", (byte)1);
 
                 OperationsSql.ExecuteBasicCommandWithTransaction(command);
+
 
             }
             catch (SqlException ex)
@@ -152,7 +153,7 @@ namespace AppTipika.PersonDAL
 
             //Consulta para insertar personas
             string queryString = @"INSERT INTO Persona(idPersona, cedulaDeIdentidad, nombres, primerApellido, segundoApellido, correoElectronico, direccion, telefono, eliminado) 
-                                   VALUES(@idPersona, @idUsuario, @nombres, @primerApellido, @segundoApellido, @correoElectronico, @direccion, @telefono, @eliminado)";
+                                   VALUES(@idPersona, @cedulaDeIdentidad, @nombres, @primerApellido, @segundoApellido, @correoElectronico, @direccion, @telefono, @eliminado)";
 
             try
             {
@@ -166,7 +167,7 @@ namespace AppTipika.PersonDAL
                 command.Parameters.AddWithValue("@correoElectronico", person.Email);
                 command.Parameters.AddWithValue("@direccion", person.Address);
                 command.Parameters.AddWithValue("@telefono", person.Phone);
-                command.Parameters.AddWithValue("@eliminado", 1);
+                command.Parameters.AddWithValue("@eliminado", (byte)1);
 
                 OperationsSql.ExecuteBasicCommandWithTransaction(command);
 

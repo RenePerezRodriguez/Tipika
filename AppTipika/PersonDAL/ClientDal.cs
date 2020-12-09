@@ -19,8 +19,8 @@ namespace AppTipika.PersonDAL
             SqlCommand command = null;
 
             //Consulta para insertar Clientes
-            string queryString = @"INSERT INTO Cliente(idPersona, idUbicacion) 
-                                   VALUES(@idCliente, @idUbicacion)";
+            string queryString = @"INSERT INTO Cliente(idPersona) 
+                                   VALUES(@idCliente)";
             //Declaro e inicio la conexion
             SqlConnection conexion = OperationsSql.ObtenerConexion();
 
@@ -35,12 +35,11 @@ namespace AppTipika.PersonDAL
                 transaccion = conexion.BeginTransaction();
 
                 //Inserto a la persona
-                PersonDal.InsertarConTransaccionNoUser(client as Person, transaccion, conexion);
+                PersonDal.InsertarConTransaccion(client as Person, transaccion, conexion);
 
                 //Inserto al Cliente
                 command = OperationsSql.CreateBasicCommandWithTransaction(queryString, transaccion, conexion);
                 command.Parameters.AddWithValue("@idCliente", client.IdPerson);
-                command.Parameters.AddWithValue("@idUbicacion", client.Location);
 
                 OperationsSql.ExecuteBasicCommandWithTransaction(command);
 

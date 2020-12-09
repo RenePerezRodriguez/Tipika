@@ -3,10 +3,44 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AppTipika.Presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="login" Height="450" Width="800">
-    <Grid>
-        
+        Title="WinLogin" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen"  BorderBrush="WhiteSmoke" BorderThickness="5" ResizeMode="NoResize" WindowStyle="None" Height="450" Width="350">
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="61*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan="2">
+            <Grid Background="#55402a" Height="50" VerticalAlignment="Top">
+                <TextBlock FontSize="25" Foreground="White" FontWeight="Bold" Margin="0,5,0,0"  HorizontalAlignment="Center">Login</TextBlock>
+                <Button ToolTip="Cerrar Ventana" x:Name="btnClose" Width="30" Height="50" Click="btnClose_Click" HorizontalAlignment="Right" Padding="0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <materialDesign:PackIcon Foreground="White" Kind="Close" Width="40" Height="35" Margin="-15 0 0 0"/>
+                </Button>
+
+            </Grid>
+            <Ellipse Height="100"  Width="100"  Margin="25" >
+                <Ellipse.Fill>
+                    <ImageBrush  Stretch="UniformToFill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Account" Margin="5" VerticalAlignment="Center"/>
+                <TextBox materialDesign:HintAssist.IsFloating="True"   materialDesign:HintAssist.Hint="Nombre de Usuario" VerticalAlignment="Center" x:Name="txtNombreUsuario" Margin="5" Width="250" PreviewKeyDown="txtNombreUsuario_PreviewKeyDown" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Key" Margin="5" VerticalAlignment="Center"/>
+                <PasswordBox materialDesign:HintAssist.IsFloating="True"  materialDesign:HintAssist.Hint="Password" VerticalAlignment="Center" x:Name="txtPassword" Margin="5" Width="250" PreviewKeyDown="txtPassword_PreviewKeyDown" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button x:Name="btnIngresar" Content="Ingresar" Width="90" Foreground="White" VerticalAlignment="Center" Background="#FF202225" Margin="10,20" BorderBrush="Gray" Click="btnIngresar_Click" />
+                <TextBlock x:Name="tbkCrearCuenta" Height="26" VerticalAlignment="Bottom" MouseLeftButtonDown="tbkCrearCuenta_MouseLeftButtonDown">Crear Cuenta</TextBlock>
+                <Button x:Name="btnSalir" Click="btnSalir_Click" Content="Salir" Width="90" Foreground="White" VerticalAlignment="Center" Background="#FF202225" Margin="10,20" BorderBrush="Gray" />
+            </StackPanel>
+            <materialDesign:Card x:Name="cardInfo" Margin="5" Width="auto" Height="50">
+                <TextBlock x:Name="tbkDetalle"  HorizontalAlignment="Center" VerticalAlignment="Center">Nunca revele su contraseña</TextBlock>
+            </materialDesign:Card>
+            <Button Content="Prueba" Height="29" Width="80" Click="Button_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

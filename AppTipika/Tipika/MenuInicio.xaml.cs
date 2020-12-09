@@ -89,33 +89,31 @@ namespace AppTipika.Presentation
                     pruebas.Show();
                     break;
 
-                case "itemCompra":
-                    /*aqui abre la ventana de compras*/
-                    CRUD.COMPRA_PRODUCTO.ProductoCompra productoCompra = new CRUD.COMPRA_PRODUCTO.ProductoCompra();
-                    productoCompra.Owner = this;
-                    productoCompra.Show();
-                    break;
-                case "itemVenta":
-                    /*aqui abre la ventana de ventas*/
-                    CRUD.CRUD_VENTA.VentaInsert ventaInsert = new CRUD.CRUD_VENTA.VentaInsert();
-                    ventaInsert.Owner = this;
-                    ventaInsert.Show();
-                    break;
-                case "itemEmpleado":
-                    CRUD.CRUD_EMPLEADO.EmpleadoCrud empleadoCrud = new CRUD.CRUD_EMPLEADO.EmpleadoCrud();
-                    empleadoCrud.Owner = this;
-                    empleadoCrud.Show();
-                    break;
-                case "itemProveedor":
-                    CRUD.CRUD_PROVEEDOR.ProveedorCrud proveedorCrud = new CRUD.CRUD_PROVEEDOR.ProveedorCrud();
-                    proveedorCrud.Owner = this;
-                    proveedorCrud.Show();
-                    break;
-                case "itemProducto":
-                    CRUD.CRUD_PRODUCTO.ProductoCrud productoCrud = new CRUD.CRUD_PRODUCTO.ProductoCrud();
-                    productoCrud.Owner = this;
-                    productoCrud.Show();
-                    break;
+                    /* case "itemCompra":
+                         CRUD.COMPRA_PRODUCTO.ProductoCompra productoCompra = new CRUD.COMPRA_PRODUCTO.ProductoCompra();
+                         productoCompra.Owner = this;
+                         productoCompra.Show();
+                         break;
+                     case "itemVenta":
+                         CRUD.CRUD_VENTA.VentaInsert ventaInsert = new CRUD.CRUD_VENTA.VentaInsert();
+                         ventaInsert.Owner = this;
+                         ventaInsert.Show();
+                         break;
+                     case "itemEmpleado":
+                         CRUD.CRUD_EMPLEADO.EmpleadoCrud empleadoCrud = new CRUD.CRUD_EMPLEADO.EmpleadoCrud();
+                         empleadoCrud.Owner = this;
+                         empleadoCrud.Show();
+                         break;
+                     case "itemProveedor":
+                         CRUD.CRUD_PROVEEDOR.ProveedorCrud proveedorCrud = new CRUD.CRUD_PROVEEDOR.ProveedorCrud();
+                         proveedorCrud.Owner = this;
+                         proveedorCrud.Show();
+                         break;
+                     case "itemProducto":
+                         CRUD.CRUD_PRODUCTO.ProductoCrud productoCrud = new CRUD.CRUD_PRODUCTO.ProductoCrud();
+                         productoCrud.Owner = this;
+                         productoCrud.Show();
+                         break;*/
             }
         }
 
@@ -137,9 +135,6 @@ namespace AppTipika.Presentation
         {
             //MessageBox.Show(Sesion.idSesion + "");
         }
-
-    }
-}
 
     }
 }
