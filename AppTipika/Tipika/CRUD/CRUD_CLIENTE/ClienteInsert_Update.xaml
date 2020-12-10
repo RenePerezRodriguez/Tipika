@@ -54,6 +54,6 @@
 
 
         <Button x:Name="btnInsertar" Content="INSERTAR" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Click="BtnInsertarCliente_Click" Margin="47,15,47,0" Height="Auto"/>
-        <Button x:Name="btnActualizar" Content="ACTUALIZAR" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <Button x:Name="btnActualizar" Content="ACTUALIZAR" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,29,0,0" Grid.RowSpan="2" Click="btnActualizar_Click_1" />
     </Grid>
 </Window>

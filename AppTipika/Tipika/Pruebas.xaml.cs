@@ -28,5 +28,11 @@ namespace Tipika
             ClienteInsert_Update clienteInsert_Update = new ClienteInsert_Update();
             clienteInsert_Update.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AppTipika.Presentation.CRUD.CRUD_PRODUCTO.ProductoInsert_Update productoInser_Update = new AppTipika.Presentation.CRUD.CRUD_PRODUCTO.ProductoInsert_Update();
+            productoInser_Update.Show();
+        }
     }
 }

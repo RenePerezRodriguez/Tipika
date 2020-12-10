@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppTipika.Common
 {
-    class Vehicle
+    public class Vehicle
     {
     }
 }

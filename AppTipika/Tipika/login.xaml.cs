@@ -71,10 +71,9 @@ namespace AppTipika.Presentation
                             User usuarioSession = UserBrl.ObtenerSession(txtNombreUsuario.Text, txtPassword.Password);
 
                             MenuInicio menuPrincipal = new MenuInicio(usuarioSession);
-                            menuPrincipal.ShowDialog();
+                            menuPrincipal.Show();
                             this.Close();
-                        }
-
+                        }        
                     }
                 }
                 catch (Exception ex)

@@ -65,5 +65,31 @@ namespace AppTipika.Presentation.CRUD
               "Termino a ejecutar el metodo de la capa de presentacion para crear un empleado"));
 
         }
+
+        private void btnActualizar_Click_1(object sender, RoutedEventArgs e)
+        {
+            Client cliente = new Client()
+            {
+                IdPerson = Guid.Parse(txtId.Text.Trim()),
+                IdentityCard = txtCedulaDeIdentidad.Text.Trim(),
+                Names = txtNombres.Text.Trim(),
+                FirstSurname = txtPrimerApellido.Text.Trim(),
+                SecondSurname = txtSegundoApellido.Text.Trim(),
+                Email = txtCorreoElectronico.Text.Trim(),
+                Address = txtdireccion.Text.Trim(),
+                Phone = int.Parse(txtTelefono.Text.Trim()),
+            };
+            try
+            {
+                ClientBrl.Update(cliente);
+                MessageBox.Show("Cliente Actualizado Correctamente");
+                Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error al actualizar la persona" + err);
+                throw err;
+            }
+        }
     }
 }

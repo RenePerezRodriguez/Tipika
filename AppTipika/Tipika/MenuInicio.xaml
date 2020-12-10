@@ -6,42 +6,12 @@
         xmlns:local="clr-namespace:AppTipika.Presentation"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MenuPrincipal" Width="1600" Height="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Storyboard x:Key="MenuCollapse">
-
-        </Storyboard>
-        <Storyboard x:Key="MenuOpen">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0:0.5" Value="200"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenuCol">
-                <EasingDoubleKeyFrame KeyTime="0" Value="45"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0:0.5" Value="250"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-
-    </Window.Resources>
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnCollapseMenu">
-            <BeginStoryboard Storyboard="{StaticResource MenuCollapse}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="btnOpenMenu">
-            <BeginStoryboard Storyboard="{StaticResource MenuOpen}"/>
-        </EventTrigger>
-    </Window.Triggers>
+        Title="MenuPrincipal" Width="1600" Height="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#212121">
     <Grid>
-
-        <Grid x:Name="GridMain"  Height="Auto" Width="Auto" Margin="200 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Grid Background="#FF202225" Height="70" VerticalAlignment="Top">
-            <TextBlock FontSize="24" FontWeight="Bold" Text="Menu Principal" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid Background="#212121" Height="70" VerticalAlignment="Top">
+            <TextBlock FontSize="72" FontWeight="Bold" Text="T I P I K A" Foreground="WhiteSmoke" VerticalAlignment="Center"  FontFamily="Calibri Light" Margin="325,0,0,0"/>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
-                <Ellipse Height="50"  Width="80"  Margin="10" Stroke="White">
-                    <Ellipse.Fill>
-                        <ImageBrush x:Name="imgLogin"  Stretch="UniformToFill"/>
-                    </Ellipse.Fill>
-                </Ellipse>
+                <TextBlock Foreground="White" x:Name="tbkId" HorizontalAlignment="Left" VerticalAlignment="Bottom" ><Run Text="Id"/></TextBlock>
                 <TextBlock Foreground="White" x:Name="tbkRol" HorizontalAlignment="Left" VerticalAlignment="Top" ><Run Text="Rol"/></TextBlock>
                 <TextBlock Foreground="White" x:Name="tbkUsuario" HorizontalAlignment="Right" VerticalAlignment="center" ><Run Text="Usuario"/></TextBlock>
                 <materialDesign:PopupBox Foreground="White" PlacementMode="BottomAndAlignRightEdges" Margin="10" StaysOpen="False">
@@ -54,66 +24,54 @@
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
-            <TextBlock FontSize="50" FontWeight="Bold" Text="Bienvenido Usuario" TextAlignment="Center" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="510,390,234,-400" Height="80" Width="850"/>
         </Grid>
-        <Grid x:Name="GridMenuCol" Background="#1C1C1C"  Width="250" HorizontalAlignment="Left" >
-
-            <Button ToolTip="Cerrar Menu" x:Name="btnCollapseMenu" Click="btnCollapseMenu_Click" Width="60" Height="70" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
-                <materialDesign:PackIcon Foreground="White" Kind="ArrowLeftBold" Width="30" Height="30"/>
-            </Button>
-            <Button ToolTip="Abrir Menu" x:Name="btnOpenMenu" Click="btnOpenMenu_Click" Width="60" Height="70" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" Visibility="Collapsed" BorderBrush="{x:Null}">
-                <materialDesign:PackIcon Foreground="White" Kind="Menu" Width="30" Height="30"/>
-            </Button>
-        </Grid>
-        <Grid x:Name="GridMenu" Background="#FF1F2129" Width="200" HorizontalAlignment="Left" >
+        <Grid x:Name="GridMenu" Background="#bc9f79" Width="260" HorizontalAlignment="Left">
             <StackPanel>
-                <Grid Background="#FF304361" Height="180" Width="Auto">
-
-                    <Image x:Name="imgLogo" Source="img/user.png" VerticalAlignment="Bottom" Width="150"/>
+                <Grid Background="#FF6C665E" Height="213" >
+                    <Ellipse Height="100"  Width="100"  Margin="25" >
+                        <Ellipse.Fill>
+                            <ImageBrush  Stretch="UniformToFill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
                 </Grid>
-                <ListView x:Name="lvwMenu" SelectionChanged="lvwMenu_SelectionChanged" Background="#FF1F2129" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView x:Name="lvwMenu" SelectionChanged="lvwMenu_SelectionChanged" Background="Transparent" Foreground="Black" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="704">
                     <ListViewItem Height="60" x:Name="itemHome">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Home" Width="30" Height="30" VerticalAlignment="Center" />
                             <TextBlock Text="Inicio" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60" x:Name="itemCompra">
+                    <ListViewItem Height="60" x:Name="itemRestaurante">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Cash" Width="30" Height="30" VerticalAlignment="Center" />
-                            <TextBlock Text="Compra" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Favourite" Width="30" Height="30" VerticalAlignment="Center" />
+                            <TextBlock Text="Registra tu negocio" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60" x:Name="itemVenta">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Cash" Width="30" Height="30" VerticalAlignment="Center" />
-                            <TextBlock Text="Venta" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="60" x:Name="itemEmpleado">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Account" Width="30" Height="30" VerticalAlignment="Center" />
-                            <TextBlock Text="Empleado" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="60" x:Name="itemProducto">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Account" Width="30" Height="30" VerticalAlignment="Center" />
-                            <TextBlock Text="Producto" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="60" x:Name="itemProveedor">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Account" Width="30" Height="30" VerticalAlignment="Center" />
-                            <TextBlock Text="Proveedor" Foreground="White" Margin="10" FontSize="18" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ListViewItem>
-
                 </ListView>
+
             </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <materialDesign:PackIcon Kind="AssignmentInd" Width="30" Height="30" VerticalAlignment="Center" />
+                <TextBlock Text="Trabaja Con nosotros 🙂" Foreground="WhiteSmoke" Margin="10" FontSize="18" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="GridRestaurantes" Margin="315,72,2,2" Background="#36332d" RenderTransformOrigin="1,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="AQUI ESTA UN PRODUCTO" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" FontSize="22" FontWeight="Bold" FontFamily="Arial Black" Background="#FF4D4747"/>
+            <Label Content="AQUI ESTA UN PRODUCTO" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1" FontSize="22" FontWeight="Bold" FontFamily="Arial Black" Background="#FF4D4747"/>
+            <Label Content="AQUI ESTA UN PRODUCTO" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" FontSize="22" FontWeight="Bold" FontFamily="Arial Black" Background="#FF4D4747"/>
         </Grid>
     </Grid>
 </Window>

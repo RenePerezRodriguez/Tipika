@@ -10,11 +10,22 @@
         "dependencies": {
           "AppTipika.Common": "1.0.0",
           "AppTipika.PersonaBRL": "1.0.0",
+          "AppTipika.ProductBRL": "1.0.0",
+          "AppTipika.RestauranteBRL": "1.0.0",
+          "GoogleMaps.LocationServices": "1.2.0.5",
           "MaterialDesignColors": "1.2.7",
           "MaterialDesignThemes": "3.2.0"
         },
         "runtime": {
           "AppTipika.Presentation.dll": {}
+        }
+      },
+      "GoogleMaps.LocationServices/1.2.0.5": {
+        "runtime": {
+          "lib/netstandard2.0/GoogleMaps.LocationServices.dll": {
+            "assemblyVersion": "1.2.0.5",
+            "fileVersion": "1.2.0.5"
+          }
         }
       },
       "MaterialDesignColors/1.2.7": {
@@ -275,6 +286,40 @@
         "runtime": {
           "AppTipika.PersonDAL.dll": {}
         }
+      },
+      "AppTipika.ProductBRL/1.0.0": {
+        "dependencies": {
+          "AppTipika.Common": "1.0.0",
+          "AppTipika.ProductDAL": "1.0.0"
+        },
+        "runtime": {
+          "AppTipika.ProductBRL.dll": {}
+        }
+      },
+      "AppTipika.ProductDAL/1.0.0": {
+        "dependencies": {
+          "AppTipika.Common": "1.0.0"
+        },
+        "runtime": {
+          "AppTipika.ProductDAL.dll": {}
+        }
+      },
+      "AppTipika.RestaurantDAL/1.0.0": {
+        "dependencies": {
+          "AppTipika.Common": "1.0.0"
+        },
+        "runtime": {
+          "AppTipika.RestaurantDAL.dll": {}
+        }
+      },
+      "AppTipika.RestauranteBRL/1.0.0": {
+        "dependencies": {
+          "AppTipika.Common": "1.0.0",
+          "AppTipika.RestaurantDAL": "1.0.0"
+        },
+        "runtime": {
+          "AppTipika.RestauranteBRL.dll": {}
+        }
       }
     }
   },
@@ -283,6 +328,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "GoogleMaps.LocationServices/1.2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0j3RL5+acxYgQNz72JdXJ1nUKxMGaY+6UvrOIOxZfp0qpJOUmo/ivCAm53atbnuy0z3vrZK+j9mZifh35UBqag==",
+      "path": "googlemaps.locationservices/1.2.0.5",
+      "hashPath": "googlemaps.locationservices.1.2.0.5.nupkg.sha512"
     },
     "MaterialDesignColors/1.2.7": {
       "type": "package",
@@ -414,6 +466,26 @@
       "sha512": ""
     },
     "AppTipika.PersonDAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AppTipika.ProductBRL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AppTipika.ProductDAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AppTipika.RestaurantDAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AppTipika.RestauranteBRL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

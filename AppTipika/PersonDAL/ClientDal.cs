@@ -68,6 +68,44 @@ namespace AppTipika.PersonDAL
         }
 
         /// <summary>
+        /// Método para actulizar a un empleado
+        /// </summary>
+        /// <param name="client"></param>
+        public static void Actualizar(Client client)
+        {
+            OperationsLogs.WriteLogsDebug("EmpleadoDal", "Actualizar", string.Format("{0} Info: {1}", DateTime.Now.ToString(), "Empezando a ejecutar el metodo acceso a datos para eliminar un Persona"));
+
+            SqlCommand command = null;
+
+            // Proporcionar la cadena de consulta 
+            string queryString = @"UPDATE Cliente
+                                    WHERE idPersona=@idPersona";
+            try
+            {
+
+                command = OperationsSql.CreateBasicCommand(queryString);
+                command.Parameters.AddWithValue("@idPersona", client.IdPerson);
+
+                //Actualizo a la persona
+                PersonDal.Actualizar(client as Person);
+
+                OperationsSql.ExecuteBasicCommand(command);
+            }
+            catch (SqlException ex)
+            {
+                OperationsLogs.WriteLogsRelease("EmpleadoDal", "Actualizar", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                OperationsLogs.WriteLogsRelease("EmpleadoDal", "Actualizar", string.Format("{0} Error: {1}", DateTime.Now.ToString(), ex.Message));
+                throw ex;
+            }
+
+            OperationsLogs.WriteLogsDebug("EmpleadoDal", "Actualizar", string.Format("{0}  Info: {1}", DateTime.Now.ToString(), "Termino de ejecutar  el metodo acceso a datos para Eliminar un Cliente"));
+
+        }
+        /// <summary>
         /// Metodo para obtener  un Cliente
         /// </summary>
         /// <param name="id">Identificado del Cliente </param>

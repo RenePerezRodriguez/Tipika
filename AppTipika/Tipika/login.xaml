@@ -40,7 +40,6 @@
             <materialDesign:Card x:Name="cardInfo" Margin="5" Width="auto" Height="50">
                 <TextBlock x:Name="tbkDetalle"  HorizontalAlignment="Center" VerticalAlignment="Center">Nunca revele su contraseña</TextBlock>
             </materialDesign:Card>
-            <Button Content="Prueba" Height="29" Width="80" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>

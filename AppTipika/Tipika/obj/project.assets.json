@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "GoogleMaps.LocationServices/1.2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GoogleMaps.LocationServices.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GoogleMaps.LocationServices.dll": {}
+        }
+      },
       "MaterialDesignColors/1.2.7": {
         "type": "package",
         "compile": {
@@ -295,10 +304,76 @@
         "runtime": {
           "bin/placeholder/AppTipika.PersonDAL.dll": {}
         }
+      },
+      "AppTipika.ProductBRL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AppTipika.Common": "1.0.0",
+          "AppTipika.ProductDAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AppTipika.ProductBRL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppTipika.ProductBRL.dll": {}
+        }
+      },
+      "AppTipika.ProductDAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AppTipika.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AppTipika.ProductDAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppTipika.ProductDAL.dll": {}
+        }
+      },
+      "AppTipika.RestaurantDAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AppTipika.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AppTipika.RestaurantDAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppTipika.RestaurantDAL.dll": {}
+        }
+      },
+      "AppTipika.RestauranteBRL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AppTipika.Common": "1.0.0",
+          "AppTipika.RestaurantDAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AppTipika.RestauranteBRL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppTipika.RestauranteBRL.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "GoogleMaps.LocationServices/1.2.0.5": {
+      "sha512": "0j3RL5+acxYgQNz72JdXJ1nUKxMGaY+6UvrOIOxZfp0qpJOUmo/ivCAm53atbnuy0z3vrZK+j9mZifh35UBqag==",
+      "type": "package",
+      "path": "googlemaps.locationservices/1.2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "googlemaps.locationservices.1.2.0.5.nupkg.sha512",
+        "googlemaps.locationservices.nuspec",
+        "lib/netstandard2.0/GoogleMaps.LocationServices.dll"
+      ]
+    },
     "MaterialDesignColors/1.2.7": {
       "sha512": "e+shDlaSAJcuTArqtfWjVUgAOlwQlgWq8akkzCGe1MvfV1ozmOqqXyWxg5w0vC/3/KZ84wnPUJeI1wzEpI0uJQ==",
       "type": "package",
@@ -878,12 +953,35 @@
       "type": "project",
       "path": "../PersonDAL/PersonDAL.csproj",
       "msbuildProject": "../PersonDAL/PersonDAL.csproj"
+    },
+    "AppTipika.ProductBRL/1.0.0": {
+      "type": "project",
+      "path": "../ProductBRL/ProductBRL.csproj",
+      "msbuildProject": "../ProductBRL/ProductBRL.csproj"
+    },
+    "AppTipika.ProductDAL/1.0.0": {
+      "type": "project",
+      "path": "../ProductDAL/ProductDAL.csproj",
+      "msbuildProject": "../ProductDAL/ProductDAL.csproj"
+    },
+    "AppTipika.RestaurantDAL/1.0.0": {
+      "type": "project",
+      "path": "../RestaurantDAL/RestaurantDAL.csproj",
+      "msbuildProject": "../RestaurantDAL/RestaurantDAL.csproj"
+    },
+    "AppTipika.RestauranteBRL/1.0.0": {
+      "type": "project",
+      "path": "../RestauranteBRL/RestauranteBRL.csproj",
+      "msbuildProject": "../RestauranteBRL/RestauranteBRL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AppTipika.Common >= 1.0.0",
       "AppTipika.PersonaBRL >= 1.0.0",
+      "AppTipika.ProductBRL >= 1.0.0",
+      "AppTipika.RestauranteBRL >= 1.0.0",
+      "GoogleMaps.LocationServices >= 1.2.0.5",
       "MaterialDesignColors >= 1.2.7",
       "MaterialDesignThemes >= 3.2.0"
     ]
@@ -920,6 +1018,12 @@
             },
             "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\PersonaBRL\\PersonaBRL.csproj": {
               "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\PersonaBRL\\PersonaBRL.csproj"
+            },
+            "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\ProductBRL\\ProductBRL.csproj": {
+              "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\ProductBRL\\ProductBRL.csproj"
+            },
+            "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\RestauranteBRL\\RestauranteBRL.csproj": {
+              "projectPath": "C:\\Users\\Rene_\\OneDrive\\Documentos\\Universidad\\Base de datos III\\Proyecto\\Tipika\\AppTipika\\RestauranteBRL\\RestauranteBRL.csproj"
             }
           }
         }
@@ -934,6 +1038,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "GoogleMaps.LocationServices": {
+            "target": "Package",
+            "version": "[1.2.0.5, )"
+          },
           "MaterialDesignColors": {
             "target": "Package",
             "version": "[1.2.7, )"

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>AppTipika.RestauranteBRL</AssemblyName>
+    <RootNamespace>AppTipika.RestauranteBRL</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\RestaurantDAL\RestaurantDAL.csproj" />
+  </ItemGroup>
+
+</Project>

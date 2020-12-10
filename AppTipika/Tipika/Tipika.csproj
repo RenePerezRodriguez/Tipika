@@ -11,14 +11,16 @@
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\PersonaBRL\PersonaBRL.csproj" />
+    <ProjectReference Include="..\ProductBRL\ProductBRL.csproj" />
+    <ProjectReference Include="..\RestauranteBRL\RestauranteBRL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="CRUD\CRUD_PEDIDO\" />
-    <Folder Include="CRUD\CRUD_PRODUCTO\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="GoogleMaps.LocationServices" Version="1.2.0.5" />
     <PackageReference Include="MaterialDesignColors" Version="1.2.7" />
     <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
   </ItemGroup>
